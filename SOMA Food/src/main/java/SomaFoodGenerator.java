@@ -21,7 +21,7 @@ public class SomaFoodGenerator {
         this.foodOn = foodOn;
         this.somaFood = somaFood;
 
-        moduleExtractor =  new SyntacticLocalityModuleExtractor(LocalityClass.STAR, foodOn.axioms());
+        moduleExtractor = new SyntacticLocalityModuleExtractor(LocalityClass.STAR, foodOn.axioms());
     }
 
     public OWLOntology getFoodOn() {
