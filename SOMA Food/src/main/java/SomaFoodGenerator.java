@@ -1,15 +1,14 @@
-import org.apache.commons.lang3.NotImplementedException;
 import org.jetbrains.annotations.NotNull;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.model.parameters.Imports;
 import org.semanticweb.owlapi.modularity.ModuleExtractor;
 import org.semanticweb.owlapi.modularity.locality.LocalityClass;
 import org.semanticweb.owlapi.modularity.locality.SyntacticLocalityModuleExtractor;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
-import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public final class SomaFoodGenerator {
@@ -22,15 +21,20 @@ public final class SomaFoodGenerator {
 
 	private final OWLReasoner reasoner;
 
-	public SomaFoodGenerator(@NotNull OWLOntology foodOn, @NotNull OWLOntology somaFood) {
+	public SomaFoodGenerator(@NotNull final OWLOntology foodOn, @NotNull final OWLOntology somaFood) {
+		this(foodOn, somaFood, new ReasonerFactory());
+	}
+
+	public SomaFoodGenerator(@NotNull final OWLOntology foodOn, @NotNull final OWLOntology somaFood, @NotNull final OWLReasonerFactory reasonerFactory) {
 		Objects.requireNonNull(foodOn);
 		Objects.requireNonNull(somaFood);
+		Objects.requireNonNull(reasonerFactory);
 
 		this.foodOn = foodOn;
 		this.somaFood = somaFood;
 
 		moduleExtractor = new SyntacticLocalityModuleExtractor(LocalityClass.STAR, foodOn.axioms());
-		reasoner = new ReasonerFactory().createReasoner(foodOn);
+		reasoner = reasonerFactory.createReasoner(foodOn);
 	}
 
 	public OWLOntology getFoodOn() {
@@ -42,22 +46,31 @@ public final class SomaFoodGenerator {
 	}
 
 
-	public void importEntities(@NotNull List<OWLEntity> toImport, boolean includeSiblings) {
+	public void importEntities(@NotNull final Stream<IRI> toImport, final boolean includeSiblings) {
 		Objects.requireNonNull(toImport);
 
-		var toImportStream = toImport.stream();
+		var toImportEvtSiblings = toImport.flatMap(this::toEntity);
 
 		if (includeSiblings) {
-			toImportStream = toImportStream.flatMap(next -> siblings(next));
+			toImportEvtSiblings = toImportEvtSiblings.parallel().flatMap(this::siblings);
 		}
 
-		var relevantAxiomsStream = moduleExtractor.extract(toImportStream).toList();
+		final var relevantAxioms = moduleExtractor.extract(toImportEvtSiblings).toList();
 
-		var toMap = relevantAxiomsStream.stream().flatMap(HasSignature::signature).
-				filter(BfoDolceMapper::needsMapping).collect(Collectors.toUnmodifiableSet());
+		// final var toMap = relevantAxioms.stream().flatMap(HasSignature::signature).
+		//		filter(BfoDolceMapper::needsMapping).collect(Collectors.toUnmodifiableSet());
 
-		// TODO sort into SOMA FOOD
-		throw new NotImplementedException();
+		// TODO sort into SOMA FOOD (Mapping from Bfo to Dul)
+
+		somaFood.addAxioms(relevantAxioms);
+	}
+
+	private @NotNull Stream<OWLEntity> toEntity(@NotNull final IRI iri) {
+		var entities = foodOn.getEntitiesInSignature(iri, Imports.INCLUDED);
+		if (entities.isEmpty()) {
+			throw new IllegalArgumentException("FoodOn does not contain an entity with the IRI '" + iri + "'");
+		}
+		return entities.stream();
 	}
 
 	/**
@@ -72,7 +85,7 @@ public final class SomaFoodGenerator {
 			case OWLClassExpression classExpression -> reasoner.superClasses(classExpression, true).
 					flatMap(next -> reasoner.subClasses(next, true));
 			case OWLObjectProperty objectProperty -> reasoner.superObjectProperties(objectProperty, true).
-					flatMap(next -> (Stream<? extends OWLEntity>) reasoner.subObjectProperties(next, true));
+					flatMap(next -> reasoner.subObjectProperties(next, true)).map(OWLObjectPropertyExpression::getNamedProperty);
 			case OWLDataProperty dataProperty -> reasoner.superDataProperties(dataProperty, true).
 					flatMap(next -> reasoner.subDataProperties(next, true));
 			default -> throw new IllegalArgumentException("Unexpected value: " + entity);
