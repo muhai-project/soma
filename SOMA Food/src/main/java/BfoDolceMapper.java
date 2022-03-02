@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 public class BfoDolceMapper {
 
-	private final static Map<OWL, Translation> translations;
+	private final static Map<IRI, Translation> translations;
 
 	private final static Map<IRI, IRI> iriReplacementMap;
 

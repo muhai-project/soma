@@ -33,7 +33,7 @@ public final class SomaFoodGenerator {
 		this.foodOn = foodOn;
 		this.somaFood = somaFood;
 
-		moduleExtractor = new SyntacticLocalityModuleExtractor(LocalityClass.STAR, foodOn.axioms());
+		moduleExtractor = new SyntacticLocalityModuleExtractor(LocalityClass.STAR, foodOn.axioms(Imports.INCLUDED));
 		reasoner = reasonerFactory.createReasoner(foodOn);
 	}
 
@@ -81,14 +81,30 @@ public final class SomaFoodGenerator {
 	 * @return The siblings of the given {@link OWLEntity}, including itself
 	 */
 	private @NotNull Stream<? extends OWLEntity> siblings(@NotNull final OWLEntity entity) {
-		return switch (entity) {
-			case OWLClassExpression classExpression -> reasoner.superClasses(classExpression, true).
-					flatMap(next -> reasoner.subClasses(next, true));
-			case OWLObjectProperty objectProperty -> reasoner.superObjectProperties(objectProperty, true).
-					flatMap(next -> reasoner.subObjectProperties(next, true)).map(OWLObjectPropertyExpression::getNamedProperty);
-			case OWLDataProperty dataProperty -> reasoner.superDataProperties(dataProperty, true).
-					flatMap(next -> reasoner.subDataProperties(next, true));
-			default -> throw new IllegalArgumentException("Unexpected value: " + entity);
-		};
+		//return switch (entity) {
+		//	case OWLClassExpression classExpression -> reasoner.superClasses(classExpression, true)
+		//	                                                   .flatMap(next -> reasoner.subClasses(next, true));
+		//	case OWLObjectProperty objectProperty -> reasoner.superObjectProperties(objectProperty, true)
+		//	                                                 .flatMap(next -> reasoner.subObjectProperties(next, true))
+		//	                                                 .map(OWLObjectPropertyExpression::getNamedProperty);
+		//	case OWLDataProperty dataProperty -> reasoner.superDataProperties(dataProperty, true)
+		//	                                             .flatMap(next -> reasoner.subDataProperties(next, true));
+		//	default -> throw new IllegalArgumentException("Unexpected value: " + entity);
+		//};
+
+		if (entity instanceof OWLClassExpression) {
+			return reasoner.superClasses((OWLClassExpression) entity, true)
+			               .flatMap(next -> reasoner.subClasses(next, true));
+		}
+		if (entity instanceof OWLObjectProperty) {
+			return reasoner.superObjectProperties((OWLObjectPropertyExpression) entity, true)
+			               .flatMap(next -> reasoner.subObjectProperties(next, true))
+			               .map(OWLObjectPropertyExpression::getNamedProperty);
+		}
+		if (entity instanceof OWLDataProperty) {
+			return reasoner.superDataProperties((OWLDataProperty) entity, true)
+			               .flatMap(next -> reasoner.subDataProperties(next, true));
+		}
+		throw new IllegalArgumentException("Unexpected value: " + entity);
 	}
 }

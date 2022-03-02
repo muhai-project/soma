@@ -3,13 +3,14 @@ import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import org.jetbrains.annotations.NotNull;
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyCreationException;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.*;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
@@ -17,40 +18,92 @@ import java.util.stream.Stream;
 
 public class Main {
 
-	public static void main(final String[] cmdlArgs) throws IOException, OWLOntologyCreationException {
+	private final Args args;
+
+	private final OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+
+	public Main(Args args) {
+		this.args = args;
+	}
+
+	public static void main(final String[] cmdlArgs) throws IOException, OWLOntologyCreationException,
+	                                                        OWLOntologyStorageException {
 		// parse arguments
-		final Args args = parseArguments(cmdlArgs);
+		final Args args = new Args();
+		JCommander.newBuilder().addObject(args).build().parse(cmdlArgs);
 
-		// Load both ontologies (from files)
-		final OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-		final OWLOntology foodOn = manager.loadOntology(args.foodOnIri);
-		final OWLOntology soma = manager.loadOntologyFromOntologyDocument();
+		// run
+		Main main = new Main(args);
+		main.run();
+	}
 
+	private static void saveOntology(final OWLOntology toSave, final Path pathWhereToSave) throws IOException,
+	                                                                                              OWLOntologyStorageException {
+		File fileWhereToSave = pathWhereToSave.toFile();
+		fileWhereToSave.mkdirs();
+		if (!fileWhereToSave.exists()) {
+			fileWhereToSave.createNewFile();
+			// TODO Print outs
+			// TODO update owl api (remove new in line 1108 in SyntacticLocalityEvaluator)
+		}
+		try (OutputStream outputStream = new FileOutputStream(fileWhereToSave, false)) {
+			toSave.saveOntology(outputStream);
+		}
+	}
+
+	private OWLOntology createSomaFood() throws OWLOntologyCreationException {
+		// create
+		OWLOntology somaFood = manager.createOntology(args.somaFoodIri);
+
+		// add import of SOMA
+		OWLImportsDeclaration importDeclaration = manager.getOWLDataFactory().getOWLImportsDeclaration(args.somaIri);
+		manager.applyChange(new AddImport(somaFood, importDeclaration));
+
+		return somaFood;
+	}
+
+	private @NotNull Stream<IRI> irisToImport() throws IOException {
+		try (Stream<String> lines = Files.lines(args.pathOfIriFile)) {
+			return lines.filter(next -> !next.startsWith("#") && !next.isBlank()).map(IRI::create)
+			            .collect(Collectors.toUnmodifiableSet()).stream();
+		}
+	}
+
+	public void run() throws IOException, OWLOntologyStorageException, OWLOntologyCreationException {
 		// Load list of IRIs to import
-		final Stream<IRI> irisToImport = irisToImport(args.pathOfIriFile);
+		final Stream<IRI> irisToImport;
+		try {
+			irisToImport = irisToImport();
+		} catch (NoSuchFileException exception) {
+			System.err.println(
+					"The file of IRIs to import does not exist under '" + args.pathOfIriFile.toAbsolutePath() + "'.\n" + "You can specify the IRI file path using '--pathOfIriFile'.");
+			return;
+		}
+
+		// Load FoodOn (from the internet)
+		final OWLOntology foodOn = manager.loadOntology(args.foodOnIri);
+
+		// Create somaFood
+		final OWLOntology somaFood = createSomaFood();
+
 
 		// Import
+		SomaFoodGenerator generator = new SomaFoodGenerator(foodOn, somaFood);
+		generator.importEntities(irisToImport, args.includeSiblings);
+
 		// Save SOMA Food
-	}
-
-	private static @NotNull Args parseArguments(@NotNull final String[] cmdlArgs) {
-		Args args = new Args();
-		JCommander.newBuilder()
-				.addObject(args)
-				.build()
-				.parse(cmdlArgs);
-		return args;
-	}
-
-	private static @NotNull Stream<IRI> irisToImport(@NotNull final Path pathOfIriFile) throws IOException {
-		try (Stream<String> lines = Files.lines(pathOfIriFile)) {
-			return lines.filter(next -> !next.startsWith("#")).map(IRI::create).collect(Collectors.toUnmodifiableSet()).stream();
-		}
+		saveOntology(somaFood, args.pathOfSomaFoodFile);
 	}
 
 	public static class Args {
 
-		@Parameter(names = "-foodOnIRI", description = "IRI from where to load FoodOn (source of import)", converter = IRIConverter.class)
+		@Parameter(names = "-somaFoodIri", description = "IRI of the new SOMA FOOD ontology")
+		public IRI somaFoodIri = IRI.create("http://www.ease-crc.org/ont/SOMA-FOOD.owl");
+
+		@Parameter(names = "-somaIri", description = "IRI of the SOMA ontology")
+		public IRI somaIri = IRI.create("http://www.ease-crc.org/ont/SOMA-FOOD.owl");
+
+		@Parameter(names = "-foodOnIri", description = "IRI from where to load FoodOn (source of import)", converter = IRIConverter.class)
 		private IRI foodOnIri = IRI.create("http://purl.obolibrary.org/obo/foodon.owl");
 
 		@Parameter(names = "-includeSiblings", description = "Whether or not to also extract axioms regarding the siblings of specified entities")
