@@ -1,0 +1,243 @@
+# entity
+http://purl.obolibrary.org/obo/BFO_0000001
+
+# food material = ingredient
+http://purl.obolibrary.org/obo/FOODON_00002403
+
+# dough = dough
+http://purl.obolibrary.org/obo/FOODON_03311552
+
+# jar
+http://purl.obolibrary.org/obo/FOODON_03490215
+
+# flour
+http://purl.obolibrary.org/obo/FOODON_00001056
+
+# baking flour = all-purpose-flour ???
+http://purl.obolibrary.org/obo/FOODON_03316601
+
+# almond (whole)
+http://purl.obolibrary.org/obo/FOODON_00003523
+
+# almond-extract
+http://purl.obolibrary.org/obo/FOODON_03544415
+
+# baking powder
+http://purl.obolibrary.org/obo/FOODON_03301940
+
+# baking soda product
+http://purl.obolibrary.org/obo/FOODON_00002385
+
+# banana
+http://purl.obolibrary.org/obo/FOODON_00004183
+http://purl.obolibrary.org/obo/FOODON_00001628
+
+# brown sugar
+http://purl.obolibrary.org/obo/FOODON_03420156
+
+# butter
+http://purl.obolibrary.org/obo/FOODON_03310351
+
+# fruit conserve
+http://purl.obolibrary.org/obo/FOODON_03303391
+
+# canned peaches
+http://purl.obolibrary.org/obo/FOODON_03305783
+
+# powdered sugar = caster-sugar
+http://purl.obolibrary.org/obo/FOODON_03542993
+
+# cherry tomatoes
+http://purl.obolibrary.org/obo/FOODON_03401887
+http://purl.obolibrary.org/obo/FOODON_03401888
+
+# walnut
+http://purl.obolibrary.org/obo/FOODON_03316466
+
+# cocoa powder
+http://purl.obolibrary.org/obo/FOODON_03543435
+
+# corn flakes
+http://purl.obolibrary.org/obo/FOODON_03302904
+
+# Cucumber
+http://purl.obolibrary.org/obo/FOODON_00001795
+http://purl.obolibrary.org/obo/FOODON_00003415
+http://purl.obolibrary.org/obo/FOODON_03306754
+
+# dill
+http://purl.obolibrary.org/obo/FOODON_00004076
+
+# egg
+http://purl.obolibrary.org/obo/FOODON_03420225
+http://purl.obolibrary.org/obo/FOODON_03420194
+
+# flavouring extract
+http://purl.obolibrary.org/obo/FOODON_03544414
+
+# basil
+http://purl.obolibrary.org/obo/FOODON_00003629
+http://purl.obolibrary.org/obo/FOODON_00003044
+
+# coriander = cilantro
+http://purl.obolibrary.org/obo/FOODON_03540837
+
+# frozen corn
+http://purl.obolibrary.org/obo/FOODON_03302731
+
+# ground allspice
+http://purl.obolibrary.org/obo/FOODON_03301554
+
+# ground black pepper
+http://purl.obolibrary.org/obo/FOODON_03306739
+
+# ground cinnamon
+http://purl.obolibrary.org/obo/FOODON_03301556
+
+# cloves
+http://purl.obolibrary.org/obo/FOODON_00001745
+
+# ground ginger
+http://purl.obolibrary.org/obo/FOODON_03310490
+
+# cumin
+http://purl.obolibrary.org/obo/FOODON_03311872
+
+# ground nutmeg
+http://purl.obolibrary.org/obo/FOODON_03301528
+
+# jalapeno
+http://purl.obolibrary.org/obo/FOODON_00003494
+http://purl.obolibrary.org/obo/FOODON_00001976
+
+# juice
+http://purl.obolibrary.org/obo/FOODON_03420300
+http://purl.obolibrary.org/obo/FOODON_03400127
+http://purl.obolibrary.org/obo/FOODON_00001140
+
+# lime juice
+http://purl.obolibrary.org/obo/FOODON_03306160
+
+# milk
+http://purl.obolibrary.org/obo/FOODON_03307455
+http://purl.obolibrary.org/obo/UBERON_0001913
+
+# mixture
+http://purl.obolibrary.org/obo/NCIT_C45305
+
+# molasses
+http://purl.obolibrary.org/obo/CHEBI_83163
+
+# olive-oil
+http://purl.obolibrary.org/obo/FOODON_03301826
+
+# onion
+http://purl.obolibrary.org/obo/FOODON_00002069
+http://purl.obolibrary.org/obo/FOODON_03316397
+http://purl.obolibrary.org/obo/FOODON_03411300
+
+# peach juice
+http://purl.obolibrary.org/obo/FOODON_03310658
+
+# raisin
+http://purl.obolibrary.org/obo/FOODON_03301283
+
+# red pepper
+http://purl.obolibrary.org/obo/FOODON_03304285
+
+# Semisweet chocolate chips
+http://purl.obolibrary.org/obo/FOODON_03303613
+
+# shallot
+http://purl.obolibrary.org/obo/FOODON_00003748
+
+# sugar
+http://purl.obolibrary.org/obo/FOODON_03420108
+
+# sweet potato
+http://purl.obolibrary.org/obo/FOODON_00003445
+
+# toast
+http://purl.obolibrary.org/obo/FOODON_03306255
+
+# vanilla
+http://purl.obolibrary.org/obo/NCBITaxon_51238
+http://purl.obolibrary.org/obo/FOODON_00003738
+
+# vanilla extract
+http://purl.obolibrary.org/obo/FOODON_03316764
+http://purl.obolibrary.org/obo/FOODON_03544416
+
+# vegetable oil
+http://purl.obolibrary.org/obo/FOODON_03305263
+
+# vinegar
+http://purl.obolibrary.org/obo/FOODON_03301705
+
+# water
+http://purl.obolibrary.org/obo/FOODON_00002340
+http://purl.obolibrary.org/obo/FOODON_03316091
+http://purl.obolibrary.org/obo/CHEBI_15377
+
+# white sugar
+http://purl.obolibrary.org/obo/FOODON_03420157
+
+# whole weat flour
+http://purl.obolibrary.org/obo/FOODON_03302340
+
+### Missing:
+# Aggregate
+# conceptualizable
+# has-temperature
+# list-of-kitchen-entities
+# reusable
+# baking paper - maybe http://purl.obolibrary.org/obo/FOODON_03490337?
+# baking dish
+# baking tray
+# bowl
+# brush
+# bowl-lid
+# colander
+# cookie-sheet
+# cooking-utensil
+# counter-top
+# fork
+# freezer
+# fridge
+# jar-lid
+# litchen-cabinet
+# knife
+# large-bowl
+# large-bowl-lid
+# medium-bowl
+# medium-bowl-lid
+# oven
+# pan
+# pantry
+# sift
+# small-bowl
+# small-bowl-lid
+# spatula
+# spatula
+# table-spoon
+# transferable-container
+# whisk
+# wire-racks
+# wooden-spoon
+### Missing ingredients:
+# almond-flakes
+# almond-flour
+# black bean
+# conserved fruit
+# chopped walnut
+# devils-food-cake-mix
+# fresh basil
+# ground cloves
+# ground cumin
+# icing sugar - difference to powdered sugar?
+# homogenous mixture
+# heterogeneous mixture
+# powdered white sugar
+# quick cooking oats
+# red pepper flakes
+#white vinegar
