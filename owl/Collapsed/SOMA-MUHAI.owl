@@ -2678,398 +2678,6 @@ In robotics, it is not uncommon to encounter shapes that are flipped compared to
     
 
 
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#BakingDish -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#BakingDish">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lineable"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#BakingPaper -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#BakingPaper">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedDisposables"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-line"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#BakingTray -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#BakingTray">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Brushable-on"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lineable"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Bowl -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Bowl">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Coverable"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#BowlLid -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#BowlLid">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#Lid"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Brush -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Brush">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-brush"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Colander -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Colander">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-drain"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#CookieSheet -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#CookieSheet">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#BakingTray"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#CounterTop -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#CounterTop">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedFurniture"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Fork -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Fork">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-beat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mash"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mix"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Freezer -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Freezer">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Appliances"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Fridge -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Fridge">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Appliances"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Jar -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Jar">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Coverable"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Shakeable"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#JarLid -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#JarLid">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#Lid"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#KitchenCabinet -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#KitchenCabinet">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedFurniture"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Knife -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Knife">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-cut"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-peel"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread-upon"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#LargeBowl -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#LargeBowl">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#Bowl"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Lid -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Lid">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-cover"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#MediumBowl -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#MediumBowl">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#Bowl"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Oven -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Oven">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Appliances"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Pan -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Pan">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Brushable-on"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spreadable-upon"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Pantry -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Pantry">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedFurniture"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Sieve -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Sieve">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-sift"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#SmallBowl -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#SmallBowl">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#Bowl"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Spatula -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Spatula">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Spoon -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Spoon">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mix"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-stir"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#Whisk -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#Whisk">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-beat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mix"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-whisk"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-COOK.owl#WireRack -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-COOK.owl#WireRack">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
-                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lineable"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#AbductiveReasoning -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#AbductiveReasoning">
@@ -3411,6 +3019,54 @@ There can be non-physical artificial agents such as software programs but they a
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BakingDish -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BakingDish">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lineable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BakingPaper -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BakingPaper">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedDisposables"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BakingTray -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BakingTray">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Brushable-on"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lineable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Barrier -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Barrier">
@@ -3603,6 +3259,28 @@ As such, this concept can be applied only to motions involving some PhysicalAgen
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Bowl -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Bowl">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Coverable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BowlLid -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BowlLid">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lid"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BoxShape -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BoxShape">
@@ -3629,6 +3307,20 @@ As such, this concept can be applied only to motions involving some PhysicalAgen
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A symmetrical shape, either solid or hollow, contained by six rectangles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Brush -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Brush">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-brush"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3761,6 +3453,14 @@ As such, this concept can be applied only to motions involving some PhysicalAgen
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-deposit -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-deposit">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-move"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-dice -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-dice">
@@ -3797,6 +3497,14 @@ As such, this concept can be applied only to motions involving some PhysicalAgen
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-enclose">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-contain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-fetch -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-fetch">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-move"/>
     </owl:Class>
     
 
@@ -3873,6 +3581,14 @@ As such, this concept can be applied only to motions involving some PhysicalAgen
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-move -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-move">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-transpose"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-peel -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-peel">
@@ -3893,6 +3609,14 @@ As such, this concept can be applied only to motions involving some PhysicalAgen
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-saw">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-cut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-shake -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-shake">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-move"/>
     </owl:Class>
     
 
@@ -3985,6 +3709,22 @@ As such, this concept can be applied only to motions involving some PhysicalAgen
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The disposition of an object (the tool) to change the temperature of others.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-throw -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-throw">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-move"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-transfer -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-transfer">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-move"/>
     </owl:Class>
     
 
@@ -4209,6 +3949,20 @@ In some sense any process that results in entities being created or destroyed mi
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Clumsiness">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Amateurish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Colander -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Colander">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-drain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4545,6 +4299,14 @@ Adopted from GUM-4-space (Bateman et al. 2010).</rdfs:comment>
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#CookieSheet -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#CookieSheet">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#BakingTray"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Coolable -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Coolable">
@@ -4557,6 +4319,14 @@ Adopted from GUM-4-space (Bateman et al. 2010).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Cooling">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-temper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#CounterTop -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#CounterTop">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedFurniture"/>
     </owl:Class>
     
 
@@ -4735,14 +4505,6 @@ Note, most of the physical Entities we will be considering here are in fact arra
     
 
 
-    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DFetching -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DFetching">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Moving"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DPose -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DPose">
@@ -4770,14 +4532,6 @@ Note, most of the physical Entities we will be considering here are in fact arra
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DThrowing -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DThrowing">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Moving"/>
     </owl:Class>
     
 
@@ -4867,14 +4621,6 @@ A soft slab of clay deforming under its own weight on Earth would still count as
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DepositedObject">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Patient"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Depositing -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Depositing">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Moving"/>
     </owl:Class>
     
 
@@ -5587,6 +5333,40 @@ An issue to highlight here is the maintenance of constitution. Fluids-- gases in
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Fork -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Fork">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-beat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mash"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Freezer -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Freezer">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Appliances"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#FrictionAttribute -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#FrictionAttribute">
@@ -5599,6 +5379,14 @@ An issue to highlight here is the maintenance of constitution. Fluids-- gases in
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The resistance that one surface or object encounters when moving over another.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Fridge -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Fridge">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Appliances"/>
     </owl:Class>
     
 
@@ -6104,6 +5892,34 @@ Note that in a semantic sense such clauses always request information, but in a 
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Jar -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Jar">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Coverable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Shakeable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#JarLid -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#JarLid">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lid"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Joint -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Joint">
@@ -6207,10 +6023,58 @@ Note that in a semantic sense such clauses always request information, but in a 
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#KitchenCabinet -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#KitchenCabinet">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedFurniture"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Kneadable -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Kneadable">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Homogenous-Combineable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Knife -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Knife">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-cut"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-peel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread-upon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#LargeBowl -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#LargeBowl">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Bowl"/>
     </owl:Class>
     
 
@@ -6227,6 +6091,20 @@ Note that in a semantic sense such clauses always request information, but in a 
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Leg">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Limb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lid -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lid">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-cover"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -6495,6 +6373,14 @@ Note: we employ Manipulating here in its literal, original sense, of using hands
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#MediumBowl -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#MediumBowl">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Bowl"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Meltable -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Meltable">
@@ -6744,14 +6630,6 @@ One could argue Mental actions are all Physical actions, because anything the Ag
     
 
 
-    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Moving -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Moving">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-transpose"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#MovingAway -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#MovingAway">
@@ -6831,6 +6709,42 @@ One could argue Mental actions are all Physical actions, because anything the Ag
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Origin">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Location"/>
         <rdfs:comment>A role classifying the location where an event or object originated.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Oven -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Oven">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Appliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Pan -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Pan">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Brushable-on"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spreadable-upon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Pantry -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Pantry">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedFurniture"/>
     </owl:Class>
     
 
@@ -7822,14 +7736,6 @@ Note that such theories are useful both when analyzing an actual linguistic prod
     
 
 
-    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Shaking -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Shaking">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Moving"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Shape -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Shape">
@@ -7915,6 +7821,20 @@ Note that sometimes the shape as actually used for some purpose may be displaced
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Sieve -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Sieve">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-sift"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Siftable -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Siftable">
@@ -7964,6 +7884,14 @@ Simulation does not commit itself to state accuracy: the initial state of the si
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Sluggishness">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Amateurish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#SmallBowl -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#SmallBowl">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Bowl"/>
     </owl:Class>
     
 
@@ -8095,6 +8023,20 @@ As yet, this schema is not associated to any object property.</rdfs:comment>
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spatula -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spatula">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#SphereShape -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#SphereShape">
@@ -8115,6 +8057,32 @@ As yet, this schema is not associated to any object property.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Splittable">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Divideable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spoon -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spoon">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-spread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-stir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -8407,7 +8375,7 @@ Let xL, xR be objects filling the locatum, relatum roles of this schema. Then on
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Tablespoon -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Tablespoon">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#Spoon"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spoon"/>
     </owl:Class>
     
 
@@ -8643,14 +8611,6 @@ Let xL, xR be objects filling the locatum, relatum roles of this schema. Then on
     
 
 
-    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Transfering -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Transfering">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Moving"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Transformable -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Transformable">
@@ -8778,6 +8738,32 @@ It is also possible that a Transient transitionsBack to the initial object. An e
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Whisk -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Whisk">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-beat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-mix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Can-whisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Whiskable -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Whiskable">
@@ -8786,10 +8772,24 @@ It is also possible that a Transient transitionsBack to the initial object. An e
     
 
 
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#WireRack -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#WireRack">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#DesignedContainer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#hasDisposition"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Lineable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#WoodenSpoon -->
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#WoodenSpoon">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-COOK.owl#Spoon"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spoon"/>
     </owl:Class>
     
 
