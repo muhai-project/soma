@@ -9,6 +9,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
 import java.util.Objects;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public final class SomaFoodGenerator {
@@ -63,6 +64,11 @@ public final class SomaFoodGenerator {
 		// TODO sort into SOMA FOOD (Mapping from Bfo to Dul)
 
 		somaFood.addAxioms(relevantAxioms);
+
+		somaFood.signature(Imports.EXCLUDED).map(OWLEntity::getIRI).collect(Collectors.toUnmodifiableSet())
+		        .forEach(next -> {
+			        somaFood.addAxioms(foodOn.annotationAssertionAxioms(next, Imports.INCLUDEDs));
+		        });
 	}
 
 	private @NotNull Stream<OWLEntity> toEntity(@NotNull final IRI iri) {

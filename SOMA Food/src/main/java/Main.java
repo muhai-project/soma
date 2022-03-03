@@ -5,10 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
@@ -35,12 +32,14 @@ public class Main {
 		// run
 		Main main = new Main(args);
 		main.run();
+		System.exit(0);
 	}
 
 	private static void saveOntology(final OWLOntology toSave, final Path pathWhereToSave) throws IOException,
 	                                                                                              OWLOntologyStorageException {
-		File fileWhereToSave = pathWhereToSave.toFile();
-		fileWhereToSave.mkdirs();
+		File fileWhereToSave = pathWhereToSave.toAbsolutePath().toFile();
+		fileWhereToSave.getParentFile().mkdirs();
+
 		if (!fileWhereToSave.exists()) {
 			fileWhereToSave.createNewFile();
 			// TODO Print outs
@@ -86,13 +85,17 @@ public class Main {
 		// Create somaFood
 		final OWLOntology somaFood = createSomaFood();
 
-
 		// Import
 		SomaFoodGenerator generator = new SomaFoodGenerator(foodOn, somaFood);
 		generator.importEntities(irisToImport, args.includeSiblings);
 
 		// Save SOMA Food
-		saveOntology(somaFood, args.pathOfSomaFoodFile);
+		try {
+			saveOntology(somaFood, args.pathOfSomaFoodFile);
+		} catch (FileNotFoundException exception) {
+			System.err.println(
+					"The ontology could not be saved under '" + args.pathOfSomaFoodFile.toAbsolutePath() + "'.\nYou can specify the path where to save SOMA Food using '--pathOfSomaFoodFile'.");
+		}
 	}
 
 	public static class Args {
