@@ -2,8 +2,11 @@ import com.beust.jcommander.IStringConverter;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import org.jetbrains.annotations.NotNull;
+import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.reasoner.Node;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -31,7 +34,7 @@ public class Main {
 
 		// run
 		Main main = new Main(args);
-		main.run();
+		main.run2();
 		System.exit(0);
 	}
 
@@ -66,6 +69,34 @@ public class Main {
 			return lines.filter(next -> !next.startsWith("#") && !next.isBlank()).map(IRI::create)
 			            .collect(Collectors.toUnmodifiableSet()).stream();
 		}
+	}
+
+	public void run2() throws OWLOntologyCreationException, IOException, OWLOntologyStorageException {
+		var foodProductIRI = IRI.create("http://purl.obolibrary.org/obo/FOODON_00001002");
+		OWLOntology somaFood = manager.loadOntologyFromOntologyDocument(args.pathOfSomaFoodFile.toFile());
+		OWLReasoner hermiT = new ReasonerFactory().createReasoner(somaFood);
+		var dF = OWLManager.getOWLDataFactory();
+
+		var subclasses = Stream.concat(Stream.of(dF.getOWLClass(foodProductIRI)),
+		                               hermiT.subClasses(dF.getOWLClass(foodProductIRI)))
+		                       .collect(Collectors.toUnmodifiableSet());
+
+		OWLOntology newSomaFood = manager.createOntology();
+		for (OWLClass next : subclasses) {
+			for (Node<OWLClass> subClass : hermiT.getSubClasses(next, true)) {
+				if (!next.isOWLNothing() && !subClass.getRepresentativeElement().isOWLNothing()) {
+					newSomaFood.add(dF.getOWLSubClassOfAxiom(subClass.getRepresentativeElement(), next));
+				}
+			}
+			var equivalent = Stream.concat(hermiT.equivalentClasses(next), Stream.of(next)).collect(Collectors.toSet());
+			if (equivalent.size() > 1) {
+				newSomaFood.add(dF.getOWLEquivalentClassesAxiom(equivalent));
+			}
+			newSomaFood.addAxioms(somaFood.annotationAssertionAxioms(next.getIRI()));
+			newSomaFood.add(dF.getOWLDeclarationAxiom(next));
+		}
+
+		saveOntology(newSomaFood, args.pathOfSomaFoodFile);
 	}
 
 	public void run() throws IOException, OWLOntologyStorageException, OWLOntologyCreationException {

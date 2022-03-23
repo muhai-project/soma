@@ -67,7 +67,7 @@ public final class SomaFoodGenerator {
 
 		somaFood.signature(Imports.EXCLUDED).map(OWLEntity::getIRI).collect(Collectors.toUnmodifiableSet())
 		        .forEach(next -> {
-			        somaFood.addAxioms(foodOn.annotationAssertionAxioms(next, Imports.INCLUDEDs));
+			        somaFood.addAxioms(foodOn.annotationAssertionAxioms(next, Imports.INCLUDED));
 		        });
 	}
 
