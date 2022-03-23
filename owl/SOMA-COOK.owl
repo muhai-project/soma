@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.ease-crc.org/ont/SOMA-COOK.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.ease-crc.org/ont/SOMA-COOK.owl">
+    <Prefix name="" IRI="http://www.ease-crc.org/ont/SOMA-COOK.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.ease-crc.org/ont/SOMA.owl</Import>
+    <Declaration>
+        <Class IRI="#BakingDish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BakingPaper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BakingTray"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bowl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BowlLid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brush"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Colander"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CookieSheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CounterTop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Freezer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fridge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Jar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JarLid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KitchenCabinet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Knife"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LargeBowl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LargeBowlLid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumBowl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumBowlLid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oven"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pantry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sieve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmallBowl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmallBowlLid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spatula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spoon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TableSpoon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Whisk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WireRack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WoodenSpoon"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#BakingDish"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedContainer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BakingPaper"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BakingTray"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedContainer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedContainer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BowlLid"/>
+        <Class IRI="#Lid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Brush"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Colander"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CookieSheet"/>
+        <Class IRI="#BakingTray"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CounterTop"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fork"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Freezer"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#Appliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fridge"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#Appliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Jar"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedContainer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JarLid"/>
+        <Class IRI="#Lid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KitchenCabinet"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knife"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LargeBowl"/>
+        <Class IRI="#Bowl"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LargeBowlLid"/>
+        <Class IRI="#BowlLid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lid"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediumBowl"/>
+        <Class IRI="#Bowl"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediumBowlLid"/>
+        <Class IRI="#BowlLid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oven"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#Appliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pan"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedContainer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pantry"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sieve"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmallBowl"/>
+        <Class IRI="#Bowl"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmallBowlLid"/>
+        <Class IRI="#BowlLid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spatula"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spoon"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TableSpoon"/>
+        <Class IRI="#Spoon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Whisk"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedTool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WireRack"/>
+        <Class IRI="http://www.ease-crc.org/ont/SOMA.owl#DesignedContainer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WoodenSpoon"/>
+        <Class IRI="#Spoon"/>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
