@@ -2,13 +2,19 @@
 <rdf:RDF xmlns="http://www.ease-crc.org/ont/SOMA-MUHAI.owl"
      xml:base="http://www.ease-crc.org/ont/SOMA-MUHAI.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:SOMA-MUHAI="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#">
     <owl:Ontology rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl">
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-FOOD.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</owl:versionInfo>
@@ -2675,6 +2681,30 @@ In robotics, it is not uncommon to encounter shapes that are flipped compared to
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001002 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001002">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalArtifact"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002253 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301977"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03316764 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03316764">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#flavoring_extract"/>
+    </rdf:Description>
     
 
 
@@ -8790,6 +8820,218 @@ It is also possible that a Transient transitionsBack to the initial object. An e
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#WoodenSpoon">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Spoon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#all_purpose_flour -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#all_purpose_flour">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03316601"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#almond_extract -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#almond_extract">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001587"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#flavoring_extract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#almond_flakes -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#almond_flakes">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001587"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#almond_flour -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#almond_flour">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001587"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03316601"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#baking_mix -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#baking_mix">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001870"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cake_mix -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cake_mix">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#baking_mix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#caster_sugar -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#caster_sugar">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03307345"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cilantro -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cilantro">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001763"/>
+        <rdfs:label>cilantro</rdfs:label>
+        <rdfs:label>coriander (leaf)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cocoa_powder -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cocoa_powder">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03315302"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#drinking_water -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#drinking_water">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002340"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#flavoring_extract -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#flavoring_extract">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420159"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#icing_sugar -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#icing_sugar">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03307345"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#quick_cooking_oats -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#quick_cooking_oats">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03315188"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#red_pepper_flakes -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#red_pepper_flakes">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001956"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#tap_water -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#tap_water">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#drinking_water"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#white_vinegar -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#white_vinegar">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001073"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Devil&apos;s_food_cake_mix -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#Devil&apos;s_food_cake_mix">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cake_mix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#basil_leaf_(dried) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#basil_leaf_(dried)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003629"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#basil_leaf_(fresh) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#basil_leaf_(fresh)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003629"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#black_bean_(whole) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#black_bean_(whole)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002753"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cherry_tomato_(whole) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cherry_tomato_(whole)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301453"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#clove_(ground) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#clove_(ground)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001745"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cumin_(ground) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#cumin_(ground)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03311872"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#sugar_(powdered) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#sugar_(powdered)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03307345"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#walnut_(chopped) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#walnut_(chopped)">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002338"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-MUHAI.owl#white_sugar_(powdered) -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#white_sugar_(powdered)">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA-MUHAI.owl#sugar_(powdered)"/>
     </owl:Class>
     
 
